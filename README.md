@@ -58,6 +58,7 @@ talos git clone <host> --repo https://github.com/3vilsaint/talos-signal-run-2026
 talos devcontainer build <host> --project /projects/repos/talos-signal-run-20260424 --image-name talos-signal-run-20260424:dev
 talos devcontainer up <host> --project /projects/repos/talos-signal-run-20260424
 talos devcontainer exec <host> --project /projects/repos/talos-signal-run-20260424 --command "npm test && npm run smoke && npm run build && npm run report"
+talos devcontainer handoff-audit <host> --project /projects/repos/talos-signal-run-20260424 --agent shell --set-port 2396
 ```
 
 ## Agent Prompting
@@ -67,4 +68,3 @@ See [docs/PROMPT-WORKFLOW.md](docs/PROMPT-WORKFLOW.md) for the model prompting c
 ## Monitoring
 
 See [docs/MONITORING.md](docs/MONITORING.md) for stable output markers and Talos capture expectations.
-

@@ -12,6 +12,8 @@ The intended workflow is:
 6. Capture pane output and persist it with Talos command telemetry.
 7. Require a build/test/smoke report before treating the handoff as done.
 
+The devcontainer exposes container SSH on host loopback port `2396`. That gives Talos a stable shell handoff surface without exposing SSH publicly.
+
 The prompt contract should be open-ended. Talos should guard order, readiness, workspace, auth, and capture. It should not bias the model toward a particular implementation unless the user asks for that implementation.
 
 Useful prompts for this repo:
@@ -29,4 +31,3 @@ Review this repository as if you were receiving it from another agent. Identify 
 ```
 
 The unbiased part is important: Talos supplies the environment and safety rails; the user supplies the task.
-

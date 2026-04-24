@@ -1,6 +1,15 @@
 {
   "name": "Talos Signal Run",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
+  "runArgs": [
+    "-p",
+    "127.0.0.1:2396:2222"
+  ],
   "customizations": {
     "vscode": {
       "extensions": [
@@ -10,8 +19,15 @@
   },
   "forwardPorts": [
     5173,
-    4173
+    4173,
+    2222
   ],
+  "portsAttributes": {
+    "2222": {
+      "label": "Container SSH",
+      "onAutoForward": "ignore"
+    }
+  },
   "postCreateCommand": "npm ci",
   "remoteUser": "node"
 }
