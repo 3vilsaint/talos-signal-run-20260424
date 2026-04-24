@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="%23111827"/><path d="M48 32 18 16l6 16-6 16z" fill="%23f7c948"/></svg>' />
+    <title>Talos Signal Run</title>
+  </head>
+  <body>
+    <div id="app">
+      <main class="game-shell" aria-label="Talos Signal Run game">
+        <section class="playfield">
+          <canvas id="game" width="960" height="540" aria-label="Game canvas"></canvas>
+          <div class="hud hud-top">
+            <div>
+              <span class="label">Score</span>
+              <strong id="score">0</strong>
+            </div>
+            <div>
+              <span class="label">Handoffs</span>
+              <strong id="handoffs">0</strong>
+            </div>
+            <div>
+              <span class="label">Readiness</span>
+              <strong id="readiness">0/6</strong>
+            </div>
+            <div>
+              <span class="label">Health</span>
+              <strong id="health">3</strong>
+            </div>
+          </div>
+          <div class="hud hud-bottom">
+            <button id="start" type="button">Start</button>
+            <button id="pause" type="button">Pause</button>
+            <button id="restart" type="button">Restart</button>
+            <p id="status" role="status">Route prompt packets through the handoff gate.</p>
+          </div>
+        </section>
+        <aside class="side-panel" aria-label="Monitoring output">
+          <header>
+            <p class="eyebrow">Monitoring</p>
+            <h1>Talos Signal Run</h1>
+          </header>
+          <div class="meter">
+            <span>Live gate</span>
+            <div class="bar"><i id="readinessBar"></i></div>
+          </div>
+          <ul id="eventLog" class="event-log"></ul>
+        </aside>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

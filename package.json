@@ -1,0 +1,27 @@
+{
+  "name": "talos-signal-run-20260424",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "A Talos-inspired browser game for testing prompt, devcontainer, build, run, and monitoring workflows.",
+  "scripts": {
+    "start": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node --test src/*.test.js",
+    "smoke": "node scripts/smoke.mjs",
+    "report": "node scripts/report.mjs"
+  },
+  "keywords": [
+    "talos",
+    "devcontainer",
+    "game",
+    "agent-workflow",
+    "monitoring"
+  ],
+  "author": "Talos Agent Workflow",
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^8.0.10"
+  }
+}
