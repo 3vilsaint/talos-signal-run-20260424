@@ -49,7 +49,7 @@ Those markers are designed for Talos pane capture and command telemetry.
 
 ## Devcontainer
 
-This repo includes `.devcontainer/devcontainer.json` using a Node 20 devcontainer image with tmux and SSH handoff support.
+This repo includes `.devcontainer/devcontainer.json` using a Node 20 devcontainer image with tmux, SSH handoff support, and Git safe-directory setup for mounted workspaces.
 
 With Talos, the server-side flow is:
 

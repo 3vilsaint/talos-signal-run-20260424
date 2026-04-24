@@ -30,6 +30,6 @@
       "onAutoForward": "ignore"
     }
   },
-  "postCreateCommand": "npm ci",
+  "postCreateCommand": "git config --global --add safe.directory \"$PWD\" && npm ci",
   "remoteUser": "node"
 }
