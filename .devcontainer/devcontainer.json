@@ -1,7 +1,6 @@
 {
   "name": "Talos Signal Run",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bookworm",
-  "workspaceFolder": "/workspaces/talos-signal-run",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -16,4 +15,3 @@
   "postCreateCommand": "npm ci",
   "remoteUser": "node"
 }
-
